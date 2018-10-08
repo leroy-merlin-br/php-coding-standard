@@ -183,6 +183,7 @@
             <property name="usefulAnnotations" type="array">
                 <element value="@dataProvider"/>
                 <element value="@depends"/>
+                <element value="@deprecated"/>
                 <element value="@group"/>
                 <element value="@link"/>
                 <element value="@see"/>
