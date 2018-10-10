@@ -130,8 +130,8 @@
     <rule ref="SlevomatCodingStandard.ControlStructures.RequireShortTernaryOperator"/>
     <!-- Require usage of null coalesce operator when possible -->
     <rule ref="SlevomatCodingStandard.ControlStructures.RequireNullCoalesceOperator"/>
-    <!-- Force yoda conditions -->
-    <rule ref="SlevomatCodingStandard.ControlStructures.RequireYodaComparison"/>
+    <!-- Disallow yoda conditions -->
+    <rule ref="SlevomatCodingStandard.ControlStructures.DisallowYodaComparison"/>
     <!-- Forbid useless unreachable catch blocks -->
     <rule ref="SlevomatCodingStandard.Exceptions.DeadCatch"/>
     <!-- Require use statements to be alphabetically sorted -->
