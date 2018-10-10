@@ -240,8 +240,6 @@
     <rule ref="Squiz.Commenting.DocCommentAlignment"/>
     <!-- Force rules for phpDocs -->
     <rule ref="Squiz.Commenting.FunctionComment">
-        <!-- Allow `@throws` without description -->
-        <exclude name="Squiz.Commenting.FunctionComment.EmptyThrows"/>
         <!-- Does not work properly with PHP 7 / short-named types -->
         <exclude name="Squiz.Commenting.FunctionComment.IncorrectParamVarName"/>
         <!-- Does not support collections, i.e. `string[]` -->
