@@ -1,0 +1,37 @@
+dist: trusty
+sudo: false
+language: php
+
+php:
+  - 7.1
+  - 7.2
+  - 7.3
+  - nightly
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+before_install:
+  - mv ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini{,.disabled} || echo "xdebug not available"
+  - composer self-update
+
+install: travis_retry composer update --prefer-dist
+
+script:
+  - vendor/bin/phpcs
+  - vendor/bin/phpcs $(find tests/input/* | sort) --report=summary --report-file=phpcs.log; diff tests/expected_report.txt phpcs.log
+
+stages:
+  - Test
+  - Apply fixes
+
+jobs:
+  allow_failures:
+    - php: nightly
+
+  include:
+    - stage: Apply fixes
+      before_script:
+        - cp -R tests/input/ tests/input2/
+      script: vendor/bin/phpcbf tests/input2; diff tests/input2 tests/fixed
