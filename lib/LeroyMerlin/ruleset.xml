@@ -187,7 +187,6 @@
                 <element value="@group"/>
                 <element value="@link"/>
                 <element value="@see"/>
-                <element value="@SWG\"/>
             </property>
         </properties>
         <!-- Review params before enable it, may be some false-positives -->
