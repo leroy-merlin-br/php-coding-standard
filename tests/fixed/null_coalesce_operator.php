@@ -14,4 +14,4 @@ if (isset($foo)) {
 
 $fooBar = isset($foo, $bar) ? 'foo' : 'bar';
 
-$baz = ! isset($foo) ? 'foo' : 'baz';
+$baz = !isset($foo) ? 'foo' : 'baz';
