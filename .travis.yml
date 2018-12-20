@@ -19,8 +19,7 @@ before_install:
 install: travis_retry composer update --prefer-dist
 
 script:
-  - vendor/bin/phpcs
-  - vendor/bin/phpcs $(find tests/input/* | sort) --report=summary --report-file=phpcs.log; diff tests/expected_report.txt phpcs.log
+  - composer test
 
 stages:
   - Test
@@ -33,5 +32,5 @@ jobs:
   include:
     - stage: Apply fixes
       before_script:
-        - cp -R tests/input/ tests/input2/
-      script: vendor/bin/phpcbf tests/input2; diff tests/input2 tests/fixed
+        - composer copy-input
+      script: composer apply-rules
