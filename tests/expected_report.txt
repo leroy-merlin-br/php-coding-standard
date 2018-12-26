@@ -12,15 +12,15 @@ tests/input/forbidden-functions.php                   3       0
 tests/input/LowCaseTypes.php                          5       0
 tests/input/namespaces-spacing.php                    7       0
 tests/input/new_with_parentheses.php                  15      0
-tests/input/not_spacing.php                           4       0
-tests/input/null_coalesce_operator.php                3       0
+tests/input/not_spacing.php                           7       0
+tests/input/null_coalesce_operator.php                4       0
 tests/input/semicolon_spacing.php                     4       0
 tests/input/test-case.php                             1       0
-tests/input/useless-semicolon.php                     2       0
+tests/input/useless-semicolon.php                     4       0
 ----------------------------------------------------------------------
-A TOTAL OF 105 ERRORS AND 0 WARNINGS WERE FOUND IN 14 FILES
+A TOTAL OF 111 ERRORS AND 0 WARNINGS WERE FOUND IN 14 FILES
 ----------------------------------------------------------------------
-PHPCBF CAN FIX 98 OF THESE SNIFF VIOLATIONS AUTOMATICALLY
+PHPCBF CAN FIX 104 OF THESE SNIFF VIOLATIONS AUTOMATICALLY
 ----------------------------------------------------------------------
 
 
