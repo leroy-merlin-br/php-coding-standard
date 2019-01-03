@@ -32,6 +32,11 @@
         "sort-packages": true
     },
     "scripts": {
-        "tests": "./vendor/bin/phpcs tests/input --report=summary --report-file=phpcs.log; diff tests/expected_report.txt phpcs.log"
+        "test": "phpcs tests/input --report=summary --report-file=phpcs.log; diff tests/expected_report.txt phpcs.log",
+        "copy-input": "cp -r tests/input/. tests/fixed",
+        "apply-rules": [
+            "@copy-input",
+            "phpcbf tests/fixed; diff tests/fixed tests/expected"
+        ]
     }
 }
