@@ -17,7 +17,7 @@ tests/input/null_coalesce_operator.php                4       0
 tests/input/semicolon_spacing.php                     4       0
 tests/input/test-case.php                             1       0
 tests/input/useless-semicolon.php                     4       0
-tests/input/yoda-compairson.php                       1       0
+tests/input/yoda-comparison.php                       1       0
 ----------------------------------------------------------------------
 A TOTAL OF 111 ERRORS AND 0 WARNINGS WERE FOUND IN 15 FILES
 ----------------------------------------------------------------------
