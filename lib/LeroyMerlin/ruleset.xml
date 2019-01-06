@@ -87,6 +87,8 @@
     </rule>
     <!-- Require a comma after the last element in multi-line array -->
     <rule ref="SlevomatCodingStandard.Arrays.TrailingArrayComma"/>
+    <!-- Require usage of ::class whenever possible -->
+    <rule ref="SlevomatCodingStandard.Classes.ModernClassNameReference"/>
     <!-- Force phpDocs separation between diferrent annotations and remove extra `*` -->
     <rule ref="SlevomatCodingStandard.Commenting.DocCommentSpacing">
         <properties>
