@@ -2,6 +2,9 @@
 
 namespace Test;
 
+/**
+ * Class Foo
+ */
 class Foo
 {
     /**
