@@ -61,6 +61,7 @@ class Example implements \IteratorAggregate
 
         return $this->baz;
     }
+    
 
     public function mangleBar(int $length) : void
     {

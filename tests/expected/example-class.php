@@ -54,7 +54,6 @@ class Example implements IteratorAggregate
         return $this->foo;
     }
 
-
     /**
      * @return iterable
      */
