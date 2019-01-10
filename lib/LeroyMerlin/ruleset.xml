@@ -117,6 +117,7 @@
         <properties>
             <property name="forbiddenCommentPatterns" type="array">
                 <element value="~^(?:(?!private|protected|static)\S+ )?(?:con|de)structor\.\z~i"/>
+                <element value="~^Class \S+\z~i"/>
             </property>
         </properties>
     </rule>
