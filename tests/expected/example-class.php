@@ -91,3 +91,9 @@ class Example implements IteratorAggregate
         return new TestCase();
     }
 }
+namespace AnotherNamespace;
+
+function foo()
+{
+    return true;
+}

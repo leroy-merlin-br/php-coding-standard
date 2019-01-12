@@ -157,6 +157,8 @@
             <property name="searchAnnotations" type="boolean" value="true"/>
         </properties>
     </rule>
+    <!-- Forbid multiples namespaces in one file -->
+    <rule ref="SlevomatCodingStandard.Namespaces.RequireOneNamespaceInFile"/>
     <!-- Forbid useless alias -->
     <rule ref="SlevomatCodingStandard.Namespaces.UselessAlias"/>
     <!-- Forbid superfluous leading backslash in use statements -->
