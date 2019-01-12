@@ -8,6 +8,7 @@ tests/input/array_trailing_comma.php                  1       0
 tests/input/assignment-operators.php                  5       0
 tests/input/class-references.php                      11      0
 tests/input/concatenation_spacing.php                 13      0
+tests/input/duplicate-assignment-variable.php         1       0
 tests/input/example-class.php                         31      0
 tests/input/forbidden-comments.php                    6       0
 tests/input/forbidden-functions.php                   3       0
@@ -20,7 +21,7 @@ tests/input/semicolon_spacing.php                     4       0
 tests/input/test-case.php                             1       0
 tests/input/useless-semicolon.php                     4       0
 ----------------------------------------------------------------------
-A TOTAL OF 127 ERRORS AND 0 WARNINGS WERE FOUND IN 16 FILES
+A TOTAL OF 128 ERRORS AND 0 WARNINGS WERE FOUND IN 17 FILES
 ----------------------------------------------------------------------
 PHPCBF CAN FIX 115 OF THESE SNIFF VIOLATIONS AUTOMATICALLY
 ----------------------------------------------------------------------
