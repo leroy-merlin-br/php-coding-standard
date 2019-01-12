@@ -14,6 +14,13 @@ use LeroyMerlin\Sniffs\Spacing\ControlStructureSniff;
  */
 class Example implements \IteratorAggregate
 {
+    use Trait1, Trait2;
+
+    use Trait3;
+
+    use Trait4 {
+        foo as protected;
+    }
     private const VERSION = \PHP_VERSION - (PHP_MINOR_VERSION * 100) - PHP_PATCH_VERSION;
 
     /** @var null|int */
