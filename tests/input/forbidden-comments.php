@@ -12,6 +12,8 @@ class Foo
      */
     public function __construct()
     {
+        //
+
         echo 'Hello';
     }
 

@@ -112,6 +112,8 @@
             </property>
         </properties>
     </rule>
+    <!-- Forbid empty comments -->
+    <rule ref="SlevomatCodingStandard.Commenting.EmptyComment"/>
     <!-- Forbid useless comments -->
     <rule ref="SlevomatCodingStandard.Commenting.ForbiddenComments">
         <properties>
