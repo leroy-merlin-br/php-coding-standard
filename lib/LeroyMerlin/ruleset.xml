@@ -220,6 +220,8 @@
     </rule>
     <!-- Forbid duplicated variables assignments -->
     <rule ref="SlevomatCodingStandard.Variables.DuplicateAssignmentToVariable"/>
+    <!-- Forbid useless variables -->
+    <rule ref="SlevomatCodingStandard.Variables.UselessVariable"/>
     <!-- Forbid spaces around square brackets -->
     <rule ref="Squiz.Arrays.ArrayBracketSpacing"/>
     <!-- Force array declaration structure -->
