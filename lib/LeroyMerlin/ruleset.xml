@@ -179,6 +179,12 @@
     <rule ref="SlevomatCodingStandard.PHP.ShortList"/>
     <!-- Forbid use of longhand cast operators -->
     <rule ref="SlevomatCodingStandard.PHP.TypeCast"/>
+    <!-- Forbid useless parentheses -->
+    <rule ref="SlevomatCodingStandard.PHP.UselessParentheses">
+        <properties>
+            <property name="ignoreComplexTernaryConditions">true</property>
+        </properties>>
+    </rule>
     <!-- Forbid useless semicolon -->
     <rule ref="SlevomatCodingStandard.PHP.UselessSemicolon"/>
     <!-- Require use of short versions of scalar types (i.e. int instead of integer) -->
