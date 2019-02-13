@@ -81,9 +81,7 @@ class Example implements IteratorAggregate
 
     public static function getMinorVersion(): int
     {
-        $version = self::VERSION;
-
-        return $version;
+        return self::VERSION;
     }
 
     public static function getTestCase(): TestCase

@@ -23,7 +23,7 @@ tests/input/useless-semicolon.php                     4       0
 ----------------------------------------------------------------------
 A TOTAL OF 129 ERRORS AND 0 WARNINGS WERE FOUND IN 17 FILES
 ----------------------------------------------------------------------
-PHPCBF CAN FIX 115 OF THESE SNIFF VIOLATIONS AUTOMATICALLY
+PHPCBF CAN FIX 116 OF THESE SNIFF VIOLATIONS AUTOMATICALLY
 ----------------------------------------------------------------------
 
 
