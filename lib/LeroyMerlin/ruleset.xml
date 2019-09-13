@@ -195,14 +195,7 @@
     <rule ref="SlevomatCodingStandard.TypeHints.TypeHintDeclaration">
         <properties>
             <property name="enableEachParameterAndReturnInspection" value="true"/>
-            <property name="usefulAnnotations" type="array">
-                <element value="@dataProvider"/>
-                <element value="@depends"/>
-                <element value="@deprecated"/>
-                <element value="@group"/>
-                <element value="@link"/>
-                <element value="@see"/>
-            </property>
+            <property name="allAnnotationsAreUseful" type="true"/>
         </properties>
         <!-- Review params before enable it, may be some false-positives -->
         <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingParameterTypeHint"/>
