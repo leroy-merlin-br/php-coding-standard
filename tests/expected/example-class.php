@@ -1,4 +1,5 @@
 <?php
+
 namespace Example;
 
 use ArrayIterator;
@@ -7,8 +8,10 @@ use InvalidArgumentException;
 use Iterator;
 use IteratorAggregate;
 use LeroyMerlin\Sniffs\Spacing\ControlStructureSniff;
+
 use function strlen as stringLength;
 use function substr;
+
 use const PHP_RELEASE_VERSION as PHP_PATCH_VERSION;
 use const PHP_VERSION;
 
@@ -19,20 +22,14 @@ class Example implements IteratorAggregate
 {
     private const VERSION = PHP_VERSION - (PHP_MINOR_VERSION * 100) - PHP_PATCH_VERSION;
 
-    /**
-     * @var int|null
-     */
-    private $foo;
+    private ?int $foo = null;
 
     /**
      * @var string[]
      */
-    private $bar;
+    private array $bar;
 
-    /**
-     * @var bool
-     */
-    private $baz;
+    private bool $baz;
 
     /**
      * @var ControlStructureSniff|int|string|null
@@ -41,7 +38,7 @@ class Example implements IteratorAggregate
 
     /**
      * @param ControlStructureSniff|int|string|null $baxBax
-     * @param string[] $bar
+     * @param string[]                              $bar
      */
     public function __construct(?int $foo = null, array $bar = [], bool $baz = false, $baxBax = 'unused')
     {

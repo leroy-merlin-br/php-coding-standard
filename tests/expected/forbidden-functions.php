@@ -1,4 +1,5 @@
 <?php
+
 namespace Test;
 
 use function chop;

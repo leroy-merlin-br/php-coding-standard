@@ -6,10 +6,7 @@
 >
     <description>The coding standard for PHP projects on LMBR</description>
 
-    <rule ref="PSR12">
-        <!-- Checked by SlevomatCodingStandard.Namespaces.NamespaceSpacing -->
-        <exclude name="PSR12.Files.FileHeader.SpacingAfterBlock"/>
-    </rule>
+    <rule ref="PSR12"/>
 
     <!-- Force array element indentation with 4 spaces -->
     <rule ref="Generic.Arrays.ArrayIndent"/>
@@ -140,12 +137,6 @@
     <rule ref="SlevomatCodingStandard.Namespaces.DisallowGroupUse"/>
     <!-- Forbid multiple use statements on same line -->
     <rule ref="SlevomatCodingStandard.Namespaces.MultipleUsesPerLine"/>
-    <!-- Require newline after namespace declaration -->
-    <rule ref="SlevomatCodingStandard.Namespaces.NamespaceSpacing">
-        <properties>
-            <property name="linesCountBeforeNamespace" value="0"/>
-        </properties>
-    </rule>
     <!-- Forbid using absolute class name references (except global ones) -->
     <rule ref="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly"/>
     <!-- Forbid unused use statements -->
@@ -162,14 +153,6 @@
     <rule ref="SlevomatCodingStandard.Namespaces.UseDoesNotStartWithBackslash"/>
     <!-- Forbid useless uses of the same namespace -->
     <rule ref="SlevomatCodingStandard.Namespaces.UseFromSameNamespace"/>
-    <!-- Require empty newlines before and after uses -->
-    <rule ref="SlevomatCodingStandard.Namespaces.UseSpacing">
-        <properties>
-            <property name="linesCountAfterLastUse" value="1"/>
-            <property name="linesCountBeforeFirstUse" value="1"/>
-            <property name="linesCountBetweenUseTypes" value="0"/>
-        </properties>
-    </rule>
     <!-- Require combined assignment operators when possible -->
     <rule ref="SlevomatCodingStandard.Operators.RequireCombinedAssignmentOperator"/>
     <!-- Forbid `list(...)` syntax -->
@@ -272,8 +255,6 @@
         <exclude name="Squiz.Commenting.FunctionComment.ThrowsNoFullStop"/>
         <!-- Doesn't work with self as typehint -->
         <exclude name="Squiz.Commenting.FunctionComment.TypeHintMissing"/>
-        <!-- We don't use column identation on doc blocks -->
-        <exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamType"/>
     </rule>
     <!-- Forbid global functions -->
     <rule ref="Squiz.Functions.GlobalFunction"/>

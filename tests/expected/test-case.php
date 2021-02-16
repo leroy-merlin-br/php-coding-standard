@@ -1,4 +1,5 @@
 <?php
+
 namespace Fancy;
 
 use PHPUnit\Framework\TestCase as BaseTestCase;
