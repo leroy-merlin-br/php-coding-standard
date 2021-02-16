@@ -120,6 +120,9 @@
     <rule ref="SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration"/>
     <!-- Forbid comments with single line written as one-liners -->
     <rule ref="SlevomatCodingStandard.Commenting.DisallowOneLinePropertyDocComment"/>
+    <!-- Forbid empty comments -->
+    <rule ref="SlevomatCodingStandard.Commenting.EmptyComment"/>
+
     <!-- Require language constructs without parentheses -->
     <rule ref="SlevomatCodingStandard.ControlStructures.LanguageConstructWithParentheses"/>
     <!-- Require new instances with parentheses -->
