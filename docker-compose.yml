@@ -1,0 +1,12 @@
+version: '2'
+services:
+  composer:
+    image: 'composer'
+    tty: true
+    volumes:
+     - .:/app
+  php:
+    image: 'php:7-cli'
+    working_dir: /usr/src/myapp
+    volumes:
+    - .:/usr/src/myapp
