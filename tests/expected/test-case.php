@@ -12,11 +12,11 @@ final class TestCase extends BaseTestCase
     {
     }
 
-    public function createDependencies()
+    public function createDependencies(): void
     {
     }
 
-    public function methodShouldDoStuff()
+    public function methodShouldDoStuff(): void
     {
     }
 }

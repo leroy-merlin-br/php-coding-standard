@@ -192,19 +192,9 @@
     <!-- Require types to be written as natively if possible;
      require iterable types to specify phpDoc with their content;
      forbid useless/duplicated information in phpDoc -->
-    <rule ref="SlevomatCodingStandard.TypeHints.TypeHintDeclaration">
-        <properties>
-            <property name="enableEachParameterAndReturnInspection" value="true"/>
-            <property name="allAnnotationsAreUseful" type="true"/>
-        </properties>
-        <!-- Review params before enable it, may be some false-positives -->
-        <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingParameterTypeHint"/>
-        <!-- Review returns before enable it, may be some false-positives -->
-        <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingReturnTypeHint"/>
-        <!-- Talk about collections before enable it -->
-        <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingTraversableParameterTypeHintSpecification"/>
-        <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingTraversablePropertyTypeHintSpecification"/>
-        <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingTraversableReturnTypeHintSpecification"/>
+    <rule ref="SlevomatCodingStandard.TypeHints">
+        <exclude name="SlevomatCodingStandard.TypeHints.DeclareStrictTypes"/>
+        <exclude name="SlevomatCodingStandard.TypeHints.DisallowArrayTypeHintSyntax.DisallowedArrayTypeHintSyntax"/>
     </rule>
     <!-- Forbid empty lines around type declarations -->
     <rule ref="SlevomatCodingStandard.Classes.EmptyLinesAroundClassBraces">
@@ -282,6 +272,8 @@
         <exclude name="Squiz.Commenting.FunctionComment.ThrowsNoFullStop"/>
         <!-- Doesn't work with self as typehint -->
         <exclude name="Squiz.Commenting.FunctionComment.TypeHintMissing"/>
+        <!-- We don't use column identation on doc blocks -->
+        <exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamType"/>
     </rule>
     <!-- Forbid global functions -->
     <rule ref="Squiz.Functions.GlobalFunction"/>

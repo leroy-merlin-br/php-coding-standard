@@ -1,12 +1,6 @@
 version: '2'
 services:
-  composer:
-    image: 'composer'
-    tty: true
-    volumes:
-     - .:/app
   php:
-    image: 'php:7-cli'
-    working_dir: /usr/src/myapp
+    image: 'leroymerlinbr/php:7.3-apache'
     volumes:
-    - .:/usr/src/myapp
+      - .:/var/www/html
