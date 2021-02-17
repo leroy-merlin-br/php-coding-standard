@@ -176,7 +176,7 @@
      require iterable types to specify phpDoc with their content;
      forbid useless/duplicated information in phpDoc -->
     <rule ref="SlevomatCodingStandard.TypeHints">
-        <exclude name="SlevomatCodingStandard.TypeHints.DeclareStrictTypes"/>
+        <exclude name="SlevomatCodingStandard.TypeHints.DeclareStrictTypes.DeclareStrictTypesMissing"/>
         <exclude name="SlevomatCodingStandard.TypeHints.DisallowArrayTypeHintSyntax.DisallowedArrayTypeHintSyntax"/>
     </rule>
     <!-- Forbid empty lines around type declarations -->
