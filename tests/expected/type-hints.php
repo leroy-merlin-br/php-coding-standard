@@ -4,40 +4,52 @@ namespace Types;
 
 class TypeHint
 {
-    public string $data;
-
-    public string $name;
-
-    public int $age;
-
-    public ?int $foo = null;
-
     /**
      * @const float
      */
     public const PI = 3.1415;
 
-    public function test(): void
+    public $data;
+
+    /**
+     * @var string
+     */
+    public $name;
+
+    public int $age;
+
+    /**
+     * @var ?int
+     */
+    public $foo;
+
+    public function test()
     {
         // Do nothing
     }
 
-    public function get(int $id): int
+    public function get($id): int
     {
     }
 
     public function getWithParamTypeHint(int $id): int
     {
+        return 1;
     }
 
     /**
+     * @param int $id
+     *
      * @dataProvider
      */
-    public function post(int $id): void
+    public function post($id): void
     {
     }
 
-    public function returnType(): int
+    /**
+     * @return int
+     */
+    public function returnType()
     {
         return 2;
     }

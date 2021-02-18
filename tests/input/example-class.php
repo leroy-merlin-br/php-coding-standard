@@ -1,5 +1,4 @@
 <?php
-
 namespace Example;
 
 use function strlen as stringLength;

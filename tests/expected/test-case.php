@@ -9,15 +9,15 @@ use PHPUnit\Framework\TestCase as BaseTestCase;
  */
 final class TestCase extends BaseTestCase
 {
+    public function createDependencies()
+    {
+    }
+
+    public function methodShouldDoStuff()
+    {
+    }
+
     public static function doStuff(): void
-    {
-    }
-
-    public function createDependencies(): void
-    {
-    }
-
-    public function methodShouldDoStuff(): void
     {
     }
 }

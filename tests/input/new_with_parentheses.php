@@ -1,5 +1,4 @@
 <?php
-
 $foo = new \DateTimeImmutable;
 
 $barClassName = 'Bar';
