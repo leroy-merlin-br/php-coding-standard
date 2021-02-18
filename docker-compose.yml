@@ -1,0 +1,6 @@
+version: '2'
+services:
+  php:
+    image: 'leroymerlinbr/php:7.4'
+    volumes:
+      - .:/var/www/html

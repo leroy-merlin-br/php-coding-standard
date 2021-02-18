@@ -1,12 +1,9 @@
 <?php
-
 namespace Foo;
 use DateInterval;
 use DateTimeImmutable;
 use DateTimeZone;
-
 use const DATE_RFC3339;
-
 use function strrev;
 use function time;
 strrev(

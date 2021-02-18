@@ -1,5 +1,4 @@
 <?php
-
 namespace Types;
 
 class LowCaseTypes
