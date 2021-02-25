@@ -6,11 +6,7 @@ $bar = $bar ?? 'bar';
 
 $bar = $bar['baz'] ?? 'baz';
 
-if (isset($foo)) {
-    $bar = $foo;
-} else {
-    $bar = 'foo';
-}
+$bar = $foo ?? 'foo';
 
 $fooBar = isset($foo, $bar) ? 'foo' : 'bar';
 

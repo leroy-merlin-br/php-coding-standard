@@ -2,18 +2,21 @@
 
 namespace Example;
 
-use ArrayIterator;
-use Fancy\TestCase;
-use InvalidArgumentException;
-use Iterator;
-use IteratorAggregate;
-use LeroyMerlin\Sniffs\Spacing\ControlStructureSniff;
-
 use function strlen as stringLength;
-use function substr;
+
+use Fancy\TestCase;
 
 use const PHP_RELEASE_VERSION as PHP_PATCH_VERSION;
+
+use LeroyMerlin\Sniffs\Spacing\ControlStructureSniff;
+use IteratorAggregate;
+
 use const PHP_VERSION;
+
+use ArrayIterator;
+use InvalidArgumentException;
+
+use function substr;
 
 /**
  * Description
@@ -22,24 +25,26 @@ class Example implements IteratorAggregate
 {
     private const VERSION = PHP_VERSION - (PHP_MINOR_VERSION * 100) - PHP_PATCH_VERSION;
 
-    private ?int $foo = null;
+    /**
+     * @var int|null
+     */
+    private $foo;
 
     /**
      * @var string[]
      */
-    private array $bar;
+    private $bar;
 
-    private bool $baz;
+    /**
+     * @var bool
+     */
+    private $baz;
 
     /**
      * @var ControlStructureSniff|int|string|null
      */
     private $baxBax;
 
-    /**
-     * @param ControlStructureSniff|int|string|null $baxBax
-     * @param string[]                              $bar
-     */
     public function __construct(?int $foo = null, array $bar = [], bool $baz = false, $baxBax = 'unused')
     {
         $this->foo = $foo;
@@ -50,15 +55,22 @@ class Example implements IteratorAggregate
 
     /**
      * Description
+     *
+     * @return int|null
      */
     public function getFoo(): ?int
     {
         return $this->foo;
     }
 
-    public function getIterator(): Iterator
+
+    /**
+     * @return iterable
+     */
+    public function getIterator(): array
     {
         assert(null !== $this->bar);
+
         return new ArrayIterator($this->bar);
     }
 
@@ -68,6 +80,7 @@ class Example implements IteratorAggregate
 
         return $this->baz;
     }
+
 
     public function mangleBar(int $length): void
     {
@@ -88,8 +101,9 @@ class Example implements IteratorAggregate
         return new TestCase();
     }
 }
+namespace AnotherNamespace;
 
-function foo(): bool
+function foo()
 {
     return true;
 }
