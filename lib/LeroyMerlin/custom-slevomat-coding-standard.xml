@@ -233,7 +233,12 @@
   <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHintSpacing"/>
 
   <!-- Checks property type hint -->
-  <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint"/>
+  <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint">
+    <properties>
+      <!-- Setting `enableNativeTypeHint` to false means that PHPCS will not try to transform @var notations(e.g `@var int $property`) into native typehints on properties(e.g. `int $property`). -->
+      <property name="enableNativeTypeHint" value="false"/>
+    </properties>
+  </rule>
 
   <!-- Checks return type hint -->
   <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint">
