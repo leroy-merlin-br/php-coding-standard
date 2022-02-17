@@ -47,9 +47,6 @@
   <!-- Enforces method signature to be spllited into multilines when method signature is too large-->
   <rule ref="SlevomatCodingStandard.Classes.RequireMultiLineMethodSignature" />
 
-  <!-- Checks against private elements that are not used-->
-  <rule ref="SlevomatCodingStandard.Classes.UnusedPrivateElements"/>
-
   <!-- Forbid comments with single line written as one-liners -->
   <rule ref="SlevomatCodingStandard.Commenting.DisallowOneLinePropertyDocComment"/>
 
