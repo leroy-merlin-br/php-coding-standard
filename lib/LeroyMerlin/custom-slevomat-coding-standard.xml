@@ -7,7 +7,7 @@
   <description>The custom slevomat coding standard for PHP projects on LMBR</description>
 
   <!-- Enforces reasonable end bracket placement for multi-line arrays. -->
-  <rule ref="SlevomatCodingStandard.Arrays.MultiLineArrayEndBracketPlacement.ArrayEndWrongPlacement"/>
+  <rule ref="SlevomatCodingStandard.Arrays.MultiLineArrayEndBracketPlacement"/>
 
   <!-- Checks whitespaces around commas or between brackets(e.g. []) on single line arrays-->
   <rule ref="SlevomatCodingStandard.Arrays.SingleLineArrayWhitespace"/>
@@ -96,9 +96,18 @@
     <exclude name="SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration.NoAssignment"/>
   </rule>
 
+  <!-- Report @deprecated annotations without description -->
+  <rule ref="SlevomatCodingStandard.Commenting.DeprecatedAnnotationDeclaration" />
+
+
   <!-- Requires use of early exit when there is useless else and elseif on code-->
-  <rule ref="SlevomatCodingStandard.ControlStructures.EarlyExit.UselessElse"/>
-  <rule ref="SlevomatCodingStandard.ControlStructures.EarlyExit.UselessElseIf"/>
+  <rule ref="SlevomatCodingStandard.ControlStructures.EarlyExit">
+    <properties>
+      <property name="ignoreStandaloneIfInScope" value="true"/>
+      <property name="ignoreOneLineTrailingIf" value="true"/>
+      <property name="ignoreTrailingIfWithOneInstruction" value="true"/>
+    </properties>
+  </rule>
 
   <!-- Enforces blank line around jump statements like continue or return -->
   <rule ref="SlevomatCodingStandard.ControlStructures.JumpStatementsSpacing"/>
@@ -132,34 +141,34 @@
   <rule ref="SlevomatCodingStandard.Exceptions.DeadCatch"/>
 
   <!-- Enforces function calls to be spllited in more lines when the funcion call is too large -->
-  <rule ref="SlevomatCodingStandard.Functions.RequireMultiLineCall.RequiredMultiLineCall">
+  <rule ref="SlevomatCodingStandard.Functions.RequireMultiLineCall">
     <properties>
       <property name="minLineLength" value="80"/>
     </properties>
   </rule>
 
   <!-- Enforces function calls to be on single line when function call is short -->
-  <rule ref="SlevomatCodingStandard.Functions.RequireSingleLineCall.RequiredSingleLineCall">
+  <rule ref="SlevomatCodingStandard.Functions.RequireSingleLineCall">
     <properties>
       <property name="maxLineLength" value="80"/>
     </properties>
   </rule>
 
   <!-- Checks if references to \Throwable interface was made, instead of references to concrete class \Exception -->
-  <rule ref="SlevomatCodingStandard.Exceptions.ReferenceThrowableOnly.ReferencedGeneralException">
+  <rule ref="SlevomatCodingStandard.Exceptions.ReferenceThrowableOnly">
     <type>warning</type>
   </rule>
 
   <!-- Looks for unused inherited variables passed to closure via `use`. -->
-  <rule ref="SlevomatCodingStandard.Functions.UnusedInheritedVariablePassedToClosure.UnusedInheritedVariable"/>
+  <rule ref="SlevomatCodingStandard.Functions.UnusedInheritedVariablePassedToClosure"/>
 
   <!-- Checks against unused parameters. -->
-  <rule ref="SlevomatCodingStandard.Functions.UnusedParameter.UnusedParameter"/>
+  <rule ref="SlevomatCodingStandard.Functions.UnusedParameter"/>
 
   <!-- Checks against useless parameter default value. -->
-  <rule ref="SlevomatCodingStandard.Functions.UselessParameterDefaultValue.UselessParameterDefaultValue"/>
+  <rule ref="SlevomatCodingStandard.Functions.UselessParameterDefaultValue"/>
 
-  <!-- Forbid fancy group uses -->
+  <!-- Forbid fancy group uses like `use FooLibrary\Bar\Baz\{ ClassA, ClassB, ClassC as Fizbo };` -->
   <rule ref="SlevomatCodingStandard.Namespaces.DisallowGroupUse"/>
 
   <!-- Forbid multiple use statements on same line -->
@@ -192,7 +201,7 @@
     <type>warning</type>
   </rule>
 
-  <!-- Require combined assignment operators when possible -->
+  <!-- Require combined assignment operators when possible like `+=` and `-=` -->
   <rule ref="SlevomatCodingStandard.Operators.RequireCombinedAssignmentOperator"/>
 
   <!-- Forbid `list(...)` syntax -->
@@ -204,7 +213,8 @@
   <!-- Forbid useless semicolon -->
   <rule ref="SlevomatCodingStandard.PHP.UselessSemicolon"/>
 
-  <!-- Warns about possible useless parentheses. This sniff was setted as a warning because it does not work so well with complex expressions. -->
+  <!-- Warns about possible useless parentheses.
+    This sniff was setted as a warning because it does not work so well with complex expressions. -->
   <rule ref="SlevomatCodingStandard.PHP.UselessParentheses.UselessParentheses">
     <type>warning</type>
   </rule>
@@ -216,13 +226,17 @@
   <rule ref="SlevomatCodingStandard.TypeHints.LongTypeHints"/>
 
   <!-- Checks if parameter with null default value is nullable-->
-  <rule ref="SlevomatCodingStandard.TypeHints.NullableTypeForNullDefaultValue.NullabilitySymbolRequired"/>
+  <rule ref="SlevomatCodingStandard.TypeHints.NullableTypeForNullDefaultValue"/>
 
   <!-- Require that the `null` phpDocs must be in the last position -->
   <rule ref="SlevomatCodingStandard.TypeHints.NullTypeHintOnLastPosition"/>
 
   <!-- Checks parameter type hint -->
   <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint">
+    <properties>
+      <property name="enableObjectTypeHint" value="false"/>
+    </properties>
+
     <type>warning</type>
   </rule>
 
