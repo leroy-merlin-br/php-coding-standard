@@ -1,6 +1,6 @@
 version: '2'
 services:
   php:
-    image: 'leroymerlinbr/php:7.3'
+    image: '639548217638.dkr.ecr.us-east-1.amazonaws.com/kameleon:v0.0.1-base-7.4-apache'
     volumes:
       - .:/var/www/html
