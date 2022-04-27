@@ -140,6 +140,20 @@
   <!-- Forbid useless unreachable catch blocks -->
   <rule ref="SlevomatCodingStandard.Exceptions.DeadCatch"/>
 
+  <!-- Checks if references to \Throwable interface was made, instead of references to concrete class \Exception -->
+  <rule ref="SlevomatCodingStandard.Exceptions.ReferenceThrowableOnly">
+    <type>warning</type>
+  </rule>
+
+  <!-- Checks the declaration of arrow functions: it verifies spaces between `fn`, `=>` and the returned expression.
+       Also it allows arrow functions with multiple lines
+   -->
+  <rule ref="SlevomatCodingStandard.Functions.ArrowFunctionDeclaration">
+    <properties>
+      <properties name="allowMultiLine" value="true"></properties>
+    </properties>
+  </rule>
+
   <!-- Enforces function calls to be spllited in more lines when the funcion call is too large -->
   <rule ref="SlevomatCodingStandard.Functions.RequireMultiLineCall">
     <properties>
@@ -152,11 +166,6 @@
     <properties>
       <property name="maxLineLength" value="80"/>
     </properties>
-  </rule>
-
-  <!-- Checks if references to \Throwable interface was made, instead of references to concrete class \Exception -->
-  <rule ref="SlevomatCodingStandard.Exceptions.ReferenceThrowableOnly">
-    <type>warning</type>
   </rule>
 
   <!-- Looks for unused inherited variables passed to closure via `use`. -->
@@ -231,10 +240,12 @@
   <!-- Require that the `null` phpDocs must be in the last position -->
   <rule ref="SlevomatCodingStandard.TypeHints.NullTypeHintOnLastPosition"/>
 
-  <!-- Checks parameter type hint -->
+  <!-- Checks parameter type hint.
+      This sniff was setted as a warning because it may not work well with inherited parameters from libs and frameworks
+  -->
   <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint">
     <properties>
-      <property name="enableObjectTypeHint" value="false"/>
+      <property name="enableObjectTypeHint" value="true"/>
     </properties>
 
     <type>warning</type>
@@ -246,8 +257,7 @@
   <!-- Checks property type hint -->
   <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint">
     <properties>
-      <!-- Setting `enableNativeTypeHint` to false means that PHPCS will not try to transform @var notations(e.g `@var int $property`) into native typehints on properties(e.g. `int $property`). -->
-      <property name="enableNativeTypeHint" value="false"/>
+      <property name="enableNativeTypeHint" value="true"/>
     </properties>
   </rule>
 
