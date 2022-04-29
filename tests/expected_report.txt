@@ -1,30 +1,84 @@
 
 PHP CODE SNIFFER REPORT SUMMARY
-----------------------------------------------------------------------
-FILE                                                  ERRORS  WARNINGS
-----------------------------------------------------------------------
-tests/input/array_indentation.php                     10      0
-tests/input/array_trailing_comma.php                  1       0
-tests/input/assignment-operators.php                  4       0
-tests/input/class-references.php                      11      0
-tests/input/concatenation_spacing.php                 21      0
-tests/input/duplicate-assignment-variable.php         1       0
-tests/input/example-class.php                         38      0
-tests/input/forbidden-comments.php                    6       0
-tests/input/forbidden-functions.php                   3       0
-tests/input/LowCaseTypes.php                          5       0
-tests/input/namespaces-spacing.php                    6       0
-tests/input/new_with_parentheses.php                  29      0
-tests/input/not_spacing.php                           10      0
-tests/input/null_coalesce_operator.php                5       0
-tests/input/semicolon_spacing.php                     4       0
-tests/input/test-case.php                             2       0
-tests/input/type-hints.php                            9       0
-tests/input/useless-semicolon.php                     4       0
-----------------------------------------------------------------------
-A TOTAL OF 169 ERRORS AND 0 WARNINGS WERE FOUND IN 18 FILES
-----------------------------------------------------------------------
-PHPCBF CAN FIX 147 OF THESE SNIFF VIOLATIONS AUTOMATICALLY
-----------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+FILE                                                                            ERRORS  WARNINGS
+------------------------------------------------------------------------------------------------
+tests/input/array_indentation.php                                               10      0
+tests/input/concatenation_spacing.php                                           21      0
+tests/input/forbidden-comments.php                                              6       0
+tests/input/forbidden-functions.php                                             3       0
+tests/input/LowCaseTypes.php                                                    5       0
+tests/input/namespaces-spacing.php                                              6       0
+tests/input/new_with_parentheses.php                                            29      0
+tests/input/not_spacing.php                                                     10      0
+tests/input/null_coalesce_operator.php                                          5       0
+tests/input/semicolon_spacing.php                                               4       0
+tests/input/PSR12/Functions/ReturnTypeDeclaration.php                           1       1
+tests/input/Slevomat/Arrays/MultiLineArrayEndBracketPlacement.php               1       0
+tests/input/Slevomat/Arrays/SingleLineArrayWhitespace.php                       2       0
+tests/input/Slevomat/Arrays/TrailingArrayComma.php                              1       0
+tests/input/Slevomat/Classes/ClassConstantVisibility.php                        4       2
+tests/input/Slevomat/Classes/ClassMemberSpacing.php                             7       4
+tests/input/Slevomat/Classes/ClassStructure.php                                 124     39
+tests/input/Slevomat/Classes/ConstantSpacing.php                                4       0
+tests/input/Slevomat/Classes/EmptyLinesAroundClassBraces.php                    7       1
+tests/input/Slevomat/Classes/ModernClassNameReference.php                       12      1
+tests/input/Slevomat/Classes/ParentCallSpacing.php                              9       1
+tests/input/Slevomat/Classes/PropertySpacing.php                                62      4
+tests/input/Slevomat/Classes/RequireMultiLineMethodSignature.php                11      2
+tests/input/Slevomat/Commenting/DeprecatedAnnotationDeclaration.php             2       0
+tests/input/Slevomat/Commenting/DisallowOneLinePropertyDocComment.php           5       0
+tests/input/Slevomat/Commenting/EmptyComment.php                                2       0
+tests/input/Slevomat/Commenting/ForbiddenAnnotations.php                        3       0
+tests/input/Slevomat/Commenting/ForbiddenComments.php                           4       0
+tests/input/Slevomat/Commenting/InlineDocCommentDeclaration.php                 1       0
+tests/input/Slevomat/ControlStructures/EarlyExit.php                            6       2
+tests/input/Slevomat/ControlStructures/JumpStatementsSpacing.php                4       1
+tests/input/Slevomat/ControlStructures/LanguageConstructWithParentheses.php     20      10
+tests/input/Slevomat/ControlStructures/NewWithParentheses.php                   8       1
+tests/input/Slevomat/ControlStructures/RequireMultiLineTernaryOperator.php      1       0
+tests/input/Slevomat/ControlStructures/RequireNullCoalesceOperator.php          5       0
+tests/input/Slevomat/ControlStructures/RequireShortTernaryOperator.php          2       0
+tests/input/Slevomat/ControlStructures/RequireTernaryOperator.php               3       0
+tests/input/Slevomat/ControlStructures/RequireYodaComparison.php                5       0
+tests/input/Slevomat/Exceptions/DeadCatch.php                                   1       1
+tests/input/Slevomat/Exceptions/ReferenceThrowableOnly.php                      0       1
+tests/input/Slevomat/Functions/ArrowFunctionDeclaration.php                     3       0
+tests/input/Slevomat/Functions/RequireMultiLineCall.php                         6       2
+tests/input/Slevomat/Functions/RequireSingleLineCall.php                        5       2
+tests/input/Slevomat/Functions/UnusedInheritedVariablePassedToClosure.php       2       0
+tests/input/Slevomat/Functions/UnusedParameter.php                              2       1
+tests/input/Slevomat/Functions/UselessParameterDefaultValue.php                 2       1
+tests/input/Slevomat/Namespaces/DisallowGroupUse.php                            6       0
+tests/input/Slevomat/Namespaces/MultipleUsesPerLine.php                         8       0
+tests/input/Slevomat/Namespaces/ReferenceUsedNamesOnly.php                      2       0
+tests/input/Slevomat/Namespaces/RequireOneNamespaceInFile.php                   2       0
+tests/input/Slevomat/Namespaces/UnusedUses.php                                  2       1
+tests/input/Slevomat/Namespaces/UseDoesNotStartWithBackslash.php                4       0
+tests/input/Slevomat/Namespaces/UseFromSameNamespace.php                        2       0
+tests/input/Slevomat/Namespaces/UselessAlias.php                                8       0
+tests/input/Slevomat/Operators/DisallowEqualOperators.php                       3       5
+tests/input/Slevomat/Operators/RequireCombinedAssignmentOperator.php            8       0
+tests/input/Slevomat/PHP/ShortList.php                                          4       0
+tests/input/Slevomat/PHP/TypeCast.php                                           13      0
+tests/input/Slevomat/PHP/UselessParentheses.php                                 13      43
+tests/input/Slevomat/PHP/UselessSemicolon.php                                   6       0
+tests/input/Slevomat/TypeHints/DisallowMixedTypeHint.php                        31      18
+tests/input/Slevomat/TypeHints/LongTypeHints.php                                99      12
+tests/input/Slevomat/TypeHints/NullableTypeForNullDefaultValue.php              60      15
+tests/input/Slevomat/TypeHints/NullTypeHintOnLastPosition.php                   78      7
+tests/input/Slevomat/TypeHints/ParameterTypeHint.php                            66      79
+tests/input/Slevomat/TypeHints/ParameterTypeHintSpacing.php                     48      6
+tests/input/Slevomat/TypeHints/PropertyTypeHint.php                             16      0
+tests/input/Slevomat/TypeHints/ReturnTypeHint.php                               37      39
+tests/input/Slevomat/TypeHints/UselessConstantTypeHint.php                      3       0
+tests/input/Slevomat/Variables/DuplicateAssignmentToVariable.php                2       0
+tests/input/Slevomat/Variables/UselessVariable.php                              40      10
+tests/input/Slevomat/Whitespaces/DuplicateSpaces.php                            2       0
+------------------------------------------------------------------------------------------------
+A TOTAL OF 999 ERRORS AND 312 WARNINGS WERE FOUND IN 72 FILES
+------------------------------------------------------------------------------------------------
+PHPCBF CAN FIX 895 OF THESE SNIFF VIOLATIONS AUTOMATICALLY
+------------------------------------------------------------------------------------------------
 
 

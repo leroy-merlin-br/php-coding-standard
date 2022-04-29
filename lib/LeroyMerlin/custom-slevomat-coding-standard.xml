@@ -47,15 +47,11 @@
   <!-- Enforces method signature to be spllited into multilines when method signature is too large-->
   <rule ref="SlevomatCodingStandard.Classes.RequireMultiLineMethodSignature" />
 
+  <!-- Report @deprecated annotations without description -->
+  <rule ref="SlevomatCodingStandard.Commenting.DeprecatedAnnotationDeclaration" />
+
   <!-- Forbid comments with single line written as one-liners -->
   <rule ref="SlevomatCodingStandard.Commenting.DisallowOneLinePropertyDocComment"/>
-
-  <!-- Force phpDocs separation between diferrent annotations and remove extra `*` -->
-  <rule ref="SlevomatCodingStandard.Commenting.DocCommentSpacing">
-    <properties>
-      <property name="linesCountBetweenDifferentAnnotationsTypes" value="1"/>
-    </properties>
-  </rule>
 
   <!-- Forbid empty comments -->
   <rule ref="SlevomatCodingStandard.Commenting.EmptyComment"/>
@@ -95,10 +91,6 @@
     </properties>
     <exclude name="SlevomatCodingStandard.Commenting.InlineDocCommentDeclaration.NoAssignment"/>
   </rule>
-
-  <!-- Report @deprecated annotations without description -->
-  <rule ref="SlevomatCodingStandard.Commenting.DeprecatedAnnotationDeclaration" />
-
 
   <!-- Requires use of early exit when there is useless else and elseif on code-->
   <rule ref="SlevomatCodingStandard.ControlStructures.EarlyExit">
@@ -164,7 +156,7 @@
   <!-- Enforces function calls to be on single line when function call is short -->
   <rule ref="SlevomatCodingStandard.Functions.RequireSingleLineCall">
     <properties>
-      <property name="maxLineLength" value="80"/>
+      <property name="maxLineLength" value="40"/>
     </properties>
   </rule>
 
@@ -197,6 +189,7 @@
   </rule>
 
   <!-- Forbid superfluous leading backslash in use statements -->
+  <!-- @deprecated Its the same as PSR12.Files.ImportStatement.LeadingSlash -->
   <rule ref="SlevomatCodingStandard.Namespaces.UseDoesNotStartWithBackslash"/>
 
   <!-- Forbid useless uses of the same namespace -->
@@ -219,17 +212,19 @@
   <!-- Forbid use of longhand cast operators -->
   <rule ref="SlevomatCodingStandard.PHP.TypeCast"/>
 
-  <!-- Forbid useless semicolon -->
-  <rule ref="SlevomatCodingStandard.PHP.UselessSemicolon"/>
-
   <!-- Warns about possible useless parentheses.
     This sniff was setted as a warning because it does not work so well with complex expressions. -->
-  <rule ref="SlevomatCodingStandard.PHP.UselessParentheses.UselessParentheses">
+  <rule ref="SlevomatCodingStandard.PHP.UselessParentheses">
     <type>warning</type>
   </rule>
 
+  <!-- Forbid useless semicolon -->
+  <rule ref="SlevomatCodingStandard.PHP.UselessSemicolon"/>
+
   <!-- Disallow `mixed` type hints in phpDocs. -->
-  <rule ref="SlevomatCodingStandard.TypeHints.DisallowMixedTypeHint"/>
+  <rule ref="SlevomatCodingStandard.TypeHints.DisallowMixedTypeHint">
+    <type>warning</type>
+  </rule>
 
   <!-- Require use of short versions of scalar types (i.e. int instead of integer) -->
   <rule ref="SlevomatCodingStandard.TypeHints.LongTypeHints"/>
@@ -266,14 +261,14 @@
     <type>warning</type>
   </rule>
 
-  <!-- Forbid space around colon in return types -->
-  <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing">
-    <!-- This rules include in PSR-12 -->
-    <exclude name="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing.WhitespaceBeforeColon"/>
-  </rule>
-
   <!-- Checks useless `@var` annotations on constants, because the type of constant is always clear -->
-  <rule ref="SlevomatCodingStandard.TypeHints.UselessConstantTypeHint.UselessVarAnnotation"/>
+  <rule ref="SlevomatCodingStandard.TypeHints.UselessConstantTypeHint"/>
+
+  <!-- Forbid duplicated variables assignments -->
+  <rule ref="SlevomatCodingStandard.Variables.DuplicateAssignmentToVariable"/>
+
+  <!-- Forbid useless variables -->
+  <rule ref="SlevomatCodingStandard.Variables.UselessVariable"/>
 
   <!-- Checks against unnecessary duplicate spaces-->
   <rule ref="SlevomatCodingStandard.Whitespaces.DuplicateSpaces">
@@ -282,10 +277,4 @@
       <property name="ignoreSpacesInAnnotation" value="true"/>
     </properties>
   </rule>
-
-  <!-- Forbid duplicated variables assignments -->
-  <rule ref="SlevomatCodingStandard.Variables.DuplicateAssignmentToVariable"/>
-
-  <!-- Forbid useless variables -->
-  <rule ref="SlevomatCodingStandard.Variables.UselessVariable"/>
 </ruleset>
